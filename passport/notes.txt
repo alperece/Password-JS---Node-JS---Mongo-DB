@@ -1,0 +1,36 @@
+npm init -y
+
+// bcryptjs = you never want to store plain text your passport. It will encrypt.
+
+// we need passport for authentication. Passport is authentication middleware for Node.js. 
+// also we need passport-local for local strategy.
+// Passport strategy for authenticating with a username and password.
+// This module lets you authenticate using a username and password in your Node.js applications.
+// Authorization mechanisms in PassportJs are defined as “Strategy”
+
+npm install passport-local bcryptjs --save
+
+npm install ejs --save
+
+// Actually after Express 3.X is not support layout.ejs, if you want to use the layout.
+
+// connect-flash. The flash is a special area of the session used for storing messages. Messages are written to the flash and cleared after being displayed to the user. The flash is typically used in combination with redirects, ensuring that the message is available to the next page that is to be rendered.
+
+// like Missing credentials, That email is not registered...etc
+
+npm install express express-ejs-layouts mongoose passport connect-flash express-session --save
+
+npm i -D nodemon
+
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+
+// sağa yatık tırnak unutma
+    app.listen(PORT,console.log(`Server strated on port ${PORT}`));
+
+
+npm run dev
+
+// Passport is a middleware for express.js. It supports various login types, Basic, Token, Local (username, password), OAuth, OAuth2, etc. We can combine these to allow users to authenticate by signing in with Google, FB, or whatever service with very minimal amount of code. We can also use this to combine external auth services so users can choose to login with one of the selected Strategies, e.g. Google, Twitter. It's much quicker to use passport for authentication than to build one yourself from scratch. This is why we use passport. You don't need passport, it just makes developing quicker. Read more from there website => http://www.passportjs.org/
